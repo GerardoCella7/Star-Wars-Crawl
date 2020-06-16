@@ -1,0 +1,31 @@
+body {
+  color: yellow;
+  background: black;
+  text-align: center;
+}
+
+#starwars {
+  width: 800px;
+  height: 400px;
+  border: 1px solid yellow;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+#starwars .content {
+  margin-top: -300px;
+  text-align: center;
+  font-size: 45px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  transform-origin: 50% 100%;
+  transform: perspective(800px) rotateX(10deg);
+  animation: autoscroll 100s linear;
+}
+
+@keyframes autoscroll {
+  to {
+    margin-top: -2500px;
+    transform: perspective(800px) rotateX(50deg);
+  }
+}
